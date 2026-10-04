@@ -78,9 +78,12 @@
             'tag placeholder 3',
         ],
         'furbooru.org': [
-            'tag placeholder 1',
-            'tag placeholder 2',
-            'tag placeholder 3',
+            'artist:cbcamesburyfan',
+            'artist:the-furry-railfan',
+            'hyper',
+            'hyper belly',
+            'hyper breasts',
+            'hyper inflation',
         ]
     };
 
