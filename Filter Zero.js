@@ -1,13 +1,9 @@
 // ==UserScript==
-// @name         Filter Zero
-// @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
+// @name         Filter Zero - testing
+// @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered tags
 // @author       PixelSpark987 - https://is.gd/PS987
-// @icon         https://cdn.twibooru.org/favicon.svg
-// @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
-// @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @grant        GM_addStyle
-// @version      2.5.2
+// @version      2.7.1
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -26,6 +22,7 @@
 // @match        *://*.trixiebooru.org/*
 // @match        *://furbooru.org/*
 // @match        *://*.furbooru.org/*
+// @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
@@ -81,12 +78,9 @@
             'tag placeholder 3',
         ],
         'furbooru.org': [
-            'artist:cbcamesburyfan',
-            'artist:the-furry-railfan',
-            'hyper',
-            'hyper belly',
-            'hyper breasts',
-            'hyper inflation',
+            'tag placeholder 1',
+            'tag placeholder 2',
+            'tag placeholder 3',
         ]
     };
 
@@ -118,7 +112,9 @@
             transition: filter 0.3s ease-in-out !important;
         }
 
-        .image-container:hover img.custom-local-blur {
+        .image-container:hover img.custom-local-blur,
+        .image-show-container:hover img.custom-local-blur,
+        .image-target:hover img.custom-local-blur {
             filter: blur(0px) grayscale(0%) !important;
         }
     `;
@@ -131,13 +127,31 @@
         document.head.appendChild(style);
     }
 
+    // Helper to gather tags from .tagsauce / #tagsauce elements on post pages
+    function getTagsauceText() {
+        const tagsauceEl = document.querySelector('#tagsauce, .tagsauce');
+        if (!tagsauceEl) return '';
+
+        // Extract from data attributes if present, or fall back to tag element list text
+        const dsTags = tagsauceEl.getAttribute('data-tags') || tagsauceEl.getAttribute('data-image-tags') || '';
+        const tagLinksText = Array.from(tagsauceEl.querySelectorAll('.tag__name, a[data-tag-name]'))
+            .map(el => el.getAttribute('data-tag-name') || el.textContent)
+            .join(', ');
+
+        return (dsTags + ', ' + tagLinksText).toLowerCase();
+    }
+
     // Scan DOM elements and apply blur class to image targets
     function processThumbnails() {
-        const containers = document.querySelectorAll('.image-container, .image-show');
+        const tagsauceString = getTagsauceText();
+
+        // Target primary containers on gallery and post views
+        const containers = document.querySelectorAll('.image-container, .image-show-container');
 
         containers.forEach(container => {
             const anchor = container.querySelector('a');
-            const img = container.querySelector('img');
+            // Explicitly target #image-display or inner images inside .image-target / picture
+            const img = container.querySelector('#image-display') || container.querySelector('.image-target img') || container.querySelector('img');
 
             // Handle tooltip suppression safely without breaking tag matching
             if (HIDE_TOOLTIPS) {
@@ -162,14 +176,15 @@
 
             // Check multiple potential data attributes across different Philomena views
             const rawTags = container.getAttribute('data-image-tag-aliases') ||
+                            container.getAttribute('data-image-tags') ||
                             container.getAttribute('data-tags') ||
                             container.getAttribute('data-tag-names') || '';
             const linkTitle = anchor?.getAttribute('title') || anchor?.getAttribute('data-original-title') || '';
 
-            if (!rawTags && !linkTitle) return;
+            if (!rawTags && !linkTitle && !tagsauceString) return;
 
-            // Extract tags as exact complete strings using comma separation or Philomena's JSON/space-delimited string layout
-            const tagString = (rawTags + ', ' + linkTitle).toLowerCase();
+            // Extract tags as exact complete strings using comma separation
+            const tagString = (rawTags + ', ' + linkTitle + ', ' + tagsauceString).toLowerCase();
             const extractedTags = tagString.split(/,\s*/).map(t => t.trim());
 
             // Check for exact string matches against your blur tag list
