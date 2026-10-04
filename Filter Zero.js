@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.7.4
+// @version      2.7.5
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -44,32 +44,33 @@
     const SITE_TAGS = {
         // Main Sites
         'derpibooru.org': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
         'manebooru.art': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
         'ponerpics.org': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
         'ponybooru.org': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
         'tantabus.ai': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
         'twibooru.org': [
             'artist:fizzyizatty',
+            'crotchboobs',
             'fat fetish',
             'fattershy',
             'immobile',
@@ -83,7 +84,7 @@
 
         // Other Sites
         'trixiebooru.org': [
-            'tag placeholder 1',
+            'crotchboobs',
             'tag placeholder 2',
             'tag placeholder 3',
         ],
