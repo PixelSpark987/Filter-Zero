@@ -2,8 +2,12 @@
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
 // @author       PixelSpark987 - https://is.gd/PS987
+// @icon         https://cdn.twibooru.org/favicon.svg
+// @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
+// @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2.7.2
+// @grant        GM_addStyle
+// @version      2.7.3
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -22,7 +26,6 @@
 // @match        *://*.trixiebooru.org/*
 // @match        *://furbooru.org/*
 // @match        *://*.furbooru.org/*
-// @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
