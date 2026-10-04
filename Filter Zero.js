@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Filter Zero - testing
+// @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered tags
 // @author       PixelSpark987 - https://is.gd/PS987
 // @namespace    http://tampermonkey.net/
