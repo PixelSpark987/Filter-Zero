@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.5.1
+// @version      2.5.2
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -82,8 +82,11 @@
         ],
         'furbooru.org': [
             'artist:cbcamesburyfan',
-            'tag placeholder 2',
-            'tag placeholder 3',
+            'artist:the-furry-railfan',
+            'hyper',
+            'hyper belly',
+            'hyper breasts',
+            'hyper inflation',
         ]
     };
 
