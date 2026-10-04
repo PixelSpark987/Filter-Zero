@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.7.3
+// @version      2.7.4
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -69,9 +69,16 @@
             'tag placeholder 3',
         ],
         'twibooru.org': [
-            'tag placeholder 1',
-            'tag placeholder 2',
-            'tag placeholder 3',
+            'artist:fizzyizatty',
+            'fat fetish',
+            'fattershy',
+            'immobile',
+            'impossibly large belly',
+            'impossibly large butt',
+            'impossibly large everything',
+            'impossibly obese',
+            'morbidly obese',
+            'obese',
         ],
 
         // Other Sites
@@ -87,6 +94,7 @@
             'hyper belly',
             'hyper breasts',
             'hyper inflation',
+            'teats',
         ]
     };
 
