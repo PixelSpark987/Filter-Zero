@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.5.0
+// @version      2.5.1
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -81,7 +81,7 @@
             'tag placeholder 3',
         ],
         'furbooru.org': [
-            'tag placeholder 1',
+            'artist:cbcamesburyfan',
             'tag placeholder 2',
             'tag placeholder 3',
         ]
