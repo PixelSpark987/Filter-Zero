@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.2
+// @version      2.8.3
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -133,14 +133,14 @@
 
     // Inject CSS rules
     const css = `
-        img.custom-local-blur {
+        .custom-local-blur {
             filter: blur(25px) grayscale(100%) !important;
             transition: filter 0.3s ease-in-out !important;
         }
 
-        .image-container:hover img.custom-local-blur,
-        .image-show-container:hover img.custom-local-blur,
-        .image-target:hover img.custom-local-blur {
+        .image-container:hover .custom-local-blur,
+        .image-show-container:hover .custom-local-blur,
+        .image-target:hover .custom-local-blur {
             filter: blur(0px) grayscale(0%) !important;
         }
 
@@ -245,7 +245,7 @@
         overlay.innerHTML = formattedHtml;
     }
 
-    // Scan DOM elements and apply blur class to image targets
+    // Scan DOM elements and apply blur class to image/video targets
     function processThumbnails() {
         processTagsauceTags();
 
@@ -254,25 +254,27 @@
 
         containers.forEach(container => {
             const anchor = container.querySelector('a');
-            const img = container.querySelector('#image-display') || container.querySelector('.image-target img') || container.querySelector('img');
+            const mediaTarget = container.querySelector('#image-display') ||
+                                container.querySelector('.image-target img, .image-target video') ||
+                                container.querySelector('img, video');
 
             if (HIDE_TOOLTIPS) {
                 if (anchor && anchor.hasAttribute('title')) {
                     anchor.setAttribute('data-original-title', anchor.getAttribute('title'));
                     anchor.removeAttribute('title');
                 }
-                if (img && img.hasAttribute('title')) {
-                    img.setAttribute('data-original-title', img.getAttribute('title'));
-                    img.removeAttribute('title');
+                if (mediaTarget && mediaTarget.hasAttribute('title')) {
+                    mediaTarget.setAttribute('data-original-title', mediaTarget.getAttribute('title'));
+                    mediaTarget.removeAttribute('title');
                 }
             } else {
                 if (anchor && anchor.hasAttribute('data-original-title')) {
                     anchor.setAttribute('title', anchor.getAttribute('data-original-title'));
                     anchor.removeAttribute('data-original-title');
                 }
-                if (img && img.hasAttribute('data-original-title')) {
-                    img.setAttribute('title', img.getAttribute('data-original-title'));
-                    img.removeAttribute('data-original-title');
+                if (mediaTarget && mediaTarget.hasAttribute('data-original-title')) {
+                    mediaTarget.setAttribute('title', mediaTarget.getAttribute('data-original-title'));
+                    mediaTarget.removeAttribute('data-original-title');
                 }
             }
 
@@ -294,12 +296,12 @@
 
             const shouldBlur = matchedTags.length > 0;
 
-            if (img) {
+            if (mediaTarget) {
                 if (shouldBlur) {
-                    img.classList.add('custom-local-blur');
+                    mediaTarget.classList.add('custom-local-blur');
                     updateOverlay(container, matchedTags);
                 } else {
-                    img.classList.remove('custom-local-blur');
+                    mediaTarget.classList.remove('custom-local-blur');
                     updateOverlay(container, []);
                 }
             }
