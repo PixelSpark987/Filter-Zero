@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.7.6
+// @version      2.8.2
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -45,32 +45,38 @@
         // Main Sites
         'derpibooru.org': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
-            'tag placeholder 3',
+            'vore',
         ],
         'manebooru.art': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
-            'tag placeholder 3',
+            'vore',
         ],
         'ponerpics.org': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
-            'tag placeholder 3',
+            'vore',
         ],
         'ponybooru.org': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
-            'tag placeholder 3',
+            'vore',
         ],
         'tantabus.ai': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
-            'tag placeholder 3',
+            'vore',
         ],
         'twibooru.org': [
             'artist:fizzyizatty',
             'crotchboobs',
+            'crotchbra',
             'fat fetish',
             'fattershy',
             'foot focus',
@@ -81,6 +87,7 @@
             'impossibly obese',
             'morbidly obese',
             'obese',
+            'vore',
         ],
 
         // Other Sites
@@ -93,10 +100,13 @@
             'hyper breasts',
             'hyper inflation',
             'teats',
+            'vore',
         ],
         'trixiebooru.org': [
             'crotchboobs',
+            'crotchbra',
             'foot focus',
+            'vore',
         ],
     };
 
@@ -133,6 +143,33 @@
         .image-target:hover img.custom-local-blur {
             filter: blur(0px) grayscale(0%) !important;
         }
+
+        /* Simulated Overlay Styles */
+        .filter-zero-overlay {
+            pointer-events: none !important;
+            transition: opacity 0.3s ease-in-out !important;
+            opacity: 1 !important;
+        }
+
+        .image-container:hover .filter-zero-overlay {
+            opacity: 0 !important;
+        }
+
+        /* Tagsauce Matched Tag Styles */
+        .tag .filter-zero-greyscale,
+        .tag a.filter-zero-greyscale {
+            filter: grayscale(100%) !important;
+            opacity: 0.3 !important;
+            color: #888 !important;
+            transition: filter 0.2s ease-in-out, opacity 0.2s ease-in-out, color 0.2s ease-in-out !important;
+        }
+
+        .tag:hover .filter-zero-greyscale,
+        .tag:hover a.filter-zero-greyscale {
+            filter: grayscale(0%) !important;
+            opacity: 1 !important;
+            color: inherit !important;
+        }
     `;
 
     if (typeof GM_addStyle !== 'undefined') {
@@ -148,7 +185,6 @@
         const tagsauceEl = document.querySelector('#tagsauce, .tagsauce');
         if (!tagsauceEl) return '';
 
-        // Extract from data attributes if present, or fall back to tag element list text
         const dsTags = tagsauceEl.getAttribute('data-tags') || tagsauceEl.getAttribute('data-image-tags') || '';
         const tagLinksText = Array.from(tagsauceEl.querySelectorAll('.tag__name, a[data-tag-name]'))
             .map(el => el.getAttribute('data-tag-name') || el.textContent)
@@ -157,19 +193,69 @@
         return (dsTags + ', ' + tagLinksText).toLowerCase();
     }
 
+    // Greyscale matching tags in the tagsauce container without disturbing dropdown elements
+    function processTagsauceTags() {
+        const tagElements = document.querySelectorAll('.tag[data-tag-name], #tagsauce .tag');
+
+        tagElements.forEach(tagEl => {
+            const tagName = (tagEl.getAttribute('data-tag-name') ||
+                             tagEl.querySelector('.tag__name')?.getAttribute('data-tag-name') ||
+                             tagEl.querySelector('.tag__name')?.textContent || '').toLowerCase().trim();
+
+            if (!tagName) return;
+
+            const targets = tagEl.querySelectorAll('.tag__name, .tag__count, span > a');
+
+            if (blurTagsSet.has(tagName)) {
+                targets.forEach(el => el.classList.add('filter-zero-greyscale'));
+            } else {
+                targets.forEach(el => el.classList.remove('filter-zero-greyscale'));
+            }
+        });
+    }
+
+    // Manage spoiler info overlay creation and updates (gallery grid thumbnails only)
+    function updateOverlay(container, matchedTags) {
+        // Skip overlay creation entirely if on a post detail view container
+        if (!container.classList.contains('image-container')) {
+            const existingOverlay = container.querySelector('.filter-zero-overlay');
+            if (existingOverlay) existingOverlay.remove();
+            return;
+        }
+
+        let overlay = container.querySelector('.filter-zero-overlay');
+
+        if (matchedTags.length === 0) {
+            if (overlay) overlay.remove();
+            return;
+        }
+
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'media-box__overlay js-spoiler-info-overlay filter-zero-overlay';
+            container.appendChild(overlay);
+        }
+
+        // Format tags with span tooltips matching native Philomena markup
+        const formattedHtml = matchedTags.map((tag, idx) => {
+            const separator = idx === 0 ? '' : ', ';
+            return `${separator}<span title="${tag}">${tag}</span>`;
+        }).join('');
+
+        overlay.innerHTML = formattedHtml;
+    }
+
     // Scan DOM elements and apply blur class to image targets
     function processThumbnails() {
-        const tagsauceString = getTagsauceText();
+        processTagsauceTags();
 
-        // Target primary containers on gallery and post views
+        const tagsauceString = getTagsauceText();
         const containers = document.querySelectorAll('.image-container, .image-show-container');
 
         containers.forEach(container => {
             const anchor = container.querySelector('a');
-            // Explicitly target #image-display or inner images inside .image-target / picture
             const img = container.querySelector('#image-display') || container.querySelector('.image-target img') || container.querySelector('img');
 
-            // Handle tooltip suppression safely without breaking tag matching
             if (HIDE_TOOLTIPS) {
                 if (anchor && anchor.hasAttribute('title')) {
                     anchor.setAttribute('data-original-title', anchor.getAttribute('title'));
@@ -190,7 +276,6 @@
                 }
             }
 
-            // Check multiple potential data attributes across different Philomena views
             const rawTags = container.getAttribute('data-image-tag-aliases') ||
                             container.getAttribute('data-image-tags') ||
                             container.getAttribute('data-tags') ||
@@ -199,25 +284,29 @@
 
             if (!rawTags && !linkTitle && !tagsauceString) return;
 
-            // Extract tags as exact complete strings using comma separation
             const tagString = (rawTags + ', ' + linkTitle + ', ' + tagsauceString).toLowerCase();
             const extractedTags = tagString.split(/,\s*/).map(t => t.trim());
 
-            // Check for exact string matches against your blur tag list
-            const shouldBlur = extractedTags.some(tag => blurTagsSet.has(tag)) ||
-                               Array.from(blurTagsSet).some(targetTag => tagString.includes(targetTag));
+            // Collect exact matching tags for overlay generation
+            const matchedTags = Array.from(blurTagsSet).filter(targetTag =>
+                extractedTags.includes(targetTag) || tagString.includes(targetTag)
+            );
+
+            const shouldBlur = matchedTags.length > 0;
 
             if (img) {
                 if (shouldBlur) {
                     img.classList.add('custom-local-blur');
+                    updateOverlay(container, matchedTags);
                 } else {
                     img.classList.remove('custom-local-blur');
+                    updateOverlay(container, []);
                 }
             }
         });
     }
 
-    // Debounced scan queue using requestAnimationFrame to prevent Firefox thread locking
+    // Debounced scan queue using requestAnimationFrame
     let isScheduled = false;
 
     function queueScan() {
@@ -235,8 +324,10 @@
         let shouldUpdate = false;
 
         for (const mutation of mutations) {
-            // Ignore mutations caused by our own class changes
-            if (mutation.target.classList && mutation.target.classList.contains('custom-local-blur')) {
+            if (mutation.target.classList &&
+               (mutation.target.classList.contains('custom-local-blur') ||
+                mutation.target.classList.contains('filter-zero-overlay') ||
+                mutation.target.classList.contains('filter-zero-greyscale'))) {
                 continue;
             }
             shouldUpdate = true;
