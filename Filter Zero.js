@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.7.5
+// @version      2.7.6
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -22,10 +22,10 @@
 // @match        *://twibooru.org/*
 // @match        *://*.twibooru.org/*
 // Other Sites
-// @match        *://trixiebooru.org/*
-// @match        *://*.trixiebooru.org/*
 // @match        *://furbooru.org/*
 // @match        *://*.furbooru.org/*
+// @match        *://trixiebooru.org/*
+// @match        *://*.trixiebooru.org/*
 // ==/UserScript==
 
 (function() {
@@ -38,34 +38,34 @@
     const HIDE_TOOLTIPS = true; // Set to true to hide image hover tooltips, or false to keep them
 
     // =========================================================================
-    // PER-SITE TAG CONFIGURATION (One tag per line)
+    // PER-SITE TAG CONFIGURATION
     // =========================================================================
 
     const SITE_TAGS = {
         // Main Sites
         'derpibooru.org': [
             'crotchboobs',
-            'tag placeholder 2',
+            'foot focus',
             'tag placeholder 3',
         ],
         'manebooru.art': [
             'crotchboobs',
-            'tag placeholder 2',
+            'foot focus',
             'tag placeholder 3',
         ],
         'ponerpics.org': [
             'crotchboobs',
-            'tag placeholder 2',
+            'foot focus',
             'tag placeholder 3',
         ],
         'ponybooru.org': [
             'crotchboobs',
-            'tag placeholder 2',
+            'foot focus',
             'tag placeholder 3',
         ],
         'tantabus.ai': [
             'crotchboobs',
-            'tag placeholder 2',
+            'foot focus',
             'tag placeholder 3',
         ],
         'twibooru.org': [
@@ -73,6 +73,7 @@
             'crotchboobs',
             'fat fetish',
             'fattershy',
+            'foot focus',
             'immobile',
             'impossibly large belly',
             'impossibly large butt',
@@ -83,20 +84,20 @@
         ],
 
         // Other Sites
-        'trixiebooru.org': [
-            'crotchboobs',
-            'tag placeholder 2',
-            'tag placeholder 3',
-        ],
         'furbooru.org': [
             'artist:cbcamesburyfan',
             'artist:the-furry-railfan',
+            'foot focus',
             'hyper',
             'hyper belly',
             'hyper breasts',
             'hyper inflation',
             'teats',
-        ]
+        ],
+        'trixiebooru.org': [
+            'crotchboobs',
+            'foot focus',
+        ],
     };
 
     // =========================================================================
