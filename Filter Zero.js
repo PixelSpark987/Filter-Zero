@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.3
+// @version      2.8.4
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -75,6 +75,7 @@
         ],
         'twibooru.org': [
             'artist:fizzyizatty',
+            'artist:gin-blade',
             'crotchboobs',
             'crotchbra',
             'fat fetish',
