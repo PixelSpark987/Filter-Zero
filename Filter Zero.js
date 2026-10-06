@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.7
+// @version      2.8.8
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -51,7 +51,6 @@
         'derpibooru.org': [
             'artist:sikojensika',
             'bob belcher',
-            'bob's burgers',
             'body horror',
             'broken leg',
             'corpse',
