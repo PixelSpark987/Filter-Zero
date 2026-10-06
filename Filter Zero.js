@@ -6,8 +6,9 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
+// @version      2026-10-06_6
 // @grant        GM_addStyle
-// @version      2026-10-06_4
+// 
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -21,6 +22,7 @@
 // @match        *://*.tantabus.ai/*
 // @match        *://twibooru.org/*
 // @match        *://*.twibooru.org/*
+// 
 // Other Sites
 // @match        *://furbooru.org/*
 // @match        *://*.furbooru.org/*
@@ -48,7 +50,8 @@
 
     // Object map storing hostnames as keys and arrays of target tags to blur as values
     const SITE_TAGS = {
-        // Main Sites - mapping target tag names for Derpibooru
+        // Main Sites
+        // Target tag names for Derpibooru
         'derpibooru.org': [
             'adventure time',
             'alcohol',
@@ -100,6 +103,7 @@
             'vore',
             'womb with a view',
         ],
+         // 
         // Target tag names for Manebooru
         'manebooru.art': [
             'crotchboobs',
@@ -108,6 +112,7 @@
             'vore',
             'womb with a view',
         ],
+         //
         // Target tag names for Ponerpics
         'ponerpics.org': [
             'crotchboobs',
@@ -116,6 +121,7 @@
             'vore',
             'womb with a view',
         ],
+         //
         // Target tag names for Ponybooru
         'ponybooru.org': [
             'crotchboobs',
@@ -124,6 +130,7 @@
             'vore',
             'womb with a view',
         ],
+         //
         // Target tag names for Tantabus
         'tantabus.ai': [
             'crotchboobs',
@@ -132,6 +139,7 @@
             'vore',
             'womb with a view',
         ],
+         //
         // Target tag names for Twibooru
         'twibooru.org': [
             'artist:fizzyizatty',
@@ -151,7 +159,7 @@
             'vore',
             'womb with a view',
         ],
-
+         //
         // Other Sites - mapping target tag names for Furbooru
         'furbooru.org': [
             'artist:cbcamesburyfan',
@@ -165,6 +173,7 @@
             'vore',
             'womb with a view',
         ],
+         //
         // Target tag names for Trixiebooru
         'trixiebooru.org': [
             'crotchboobs',
@@ -176,7 +185,7 @@
     };
 
     // =========================================================================
-    // HOST MATCHING & SETUP
+    // HOST MATCHING & SETUP (not needing to be modified to add new sites!!!)
     // =========================================================================
 
     // Function to retrieve the correct list of target tags based on the current domain
@@ -369,10 +378,13 @@
             // Find inner anchor link
             const anchor = container.querySelector('a');
 
-            // Find target image or video element
+            // Targeted selection logic prioritizing actual image/video targets while ignoring Philomena warning/blocked placeholder SVGs
             const mediaTarget = container.querySelector('#image-display') ||
+                                container.querySelector('.image-show img, .image-show video') ||
                                 container.querySelector('.image-target img, .image-target video') ||
-                                container.querySelector('img, video');
+                                container.querySelector('.imgspoiler img') ||
+                                container.querySelector('picture img') ||
+                                container.querySelector('img:not([src*="tagblocked"]):not([src*="svg"]), video');
 
             // Handle hover title tooltip toggling
             if (HIDE_TOOLTIPS) {
