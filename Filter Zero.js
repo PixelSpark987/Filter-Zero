@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.9
+// @version      2.9,0
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -70,7 +70,7 @@
             'pregnant',
             'rick and morty',
             'rick sanchez',
-            'skinless'
+            'skinless',
             'translucent belly',
             'transparent belly',
             'transparent flesh',
