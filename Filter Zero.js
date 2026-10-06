@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_7
+// @version      2026-10-06_8
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -45,7 +45,7 @@
     // =========================================================================
     // PER-SITE TAG CONFIGURATION -
     // To add aditional sites, add them in the // @match list, and clone a tag list below, edit the name (url) of the list, and add tags to it
-    // If filtering breaks, make sure each tag list has a comma after each entry - usually, it will be the tag directly above where TampermMnkey says the error is
+    // If filtering breaks, make sure each tag list has a comma after each entry - usually, it will be the tag directly above where TampermMonkey says the error is
     // =========================================================================
 
     // Object map storing hostnames as keys and arrays of target tags to blur as values
@@ -56,6 +56,7 @@
             'adolf hitler',
             'adventure time',
             'alcohol',
+            'anal',
             'anus',
             'army',
             'artist:cookie-lovey',
@@ -120,6 +121,7 @@
          // 
         // Target tag names for Manebooru
         'manebooru.art': [
+            'anal',
             'army',
             'crotchboobs',
             'crotchbra',
@@ -131,6 +133,7 @@
          //
         // Target tag names for Ponerpics
         'ponerpics.org': [
+            'anal',
             'army',
             'crotchboobs',
             'crotchbra',
@@ -142,6 +145,7 @@
          //
         // Target tag names for Ponybooru
         'ponybooru.org': [
+            'anal',
             'army',
             'crotchboobs',
             'crotchbra',
@@ -153,6 +157,7 @@
          //
         // Target tag names for Tantabus
         'tantabus.ai': [
+            'anal',
             'army',
             'crotchboobs',
             'crotchbra',
@@ -164,6 +169,8 @@
          //
         // Target tag names for Twibooru
         'twibooru.org': [
+            'anal',
+            'anus',
             'army',
             'artist:fizzyizatty',
             'artist:gin-blade',
@@ -186,6 +193,7 @@
          //
         // Other Sites - mapping target tag names for Furbooru
         'furbooru.org': [
+            'anal',
             'army',
             'artist:cbcamesburyfan',
             'artist:the-furry-railfan',
@@ -202,6 +210,7 @@
          //
         // Target tag names for Trixiebooru
         'trixiebooru.org': [
+            'anal',
             'army',
             'crotchboobs',
             'crotchbra',
