@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2026-10-06_3
+// @version      2026-10-06_4
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -43,6 +43,7 @@
     // =========================================================================
     // PER-SITE TAG CONFIGURATION -
     // To add aditional sites, add them in the // @match list, and clone a tag list below, edit the name (url) of the list, and add tags to it
+    // If filtering breaks, make sure each tag list has a comma after each entry - usually, it will be the tag directly above where TampermMnkey says the error is
     // =========================================================================
 
     // Object map storing hostnames as keys and arrays of target tags to blur as values
@@ -73,11 +74,13 @@
             'finn the human',
             'flesh cube',
             'foot focus',
+            'futa',
             'guts',
             'hyper',
             'hyper belly',
             'hyper pregnancy',
             'impossibly large belly',
+            'impossibly large penis',
             'injured',
             'jake the dog',
             'lois griffin',
