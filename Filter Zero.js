@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.6
+// @version      2.8.7
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -49,15 +49,28 @@
     const SITE_TAGS = {
         // Main Sites - mapping target tag names for Derpibooru
         'derpibooru.org': [
+            'artist:sikojensika',
+            'bob belcher',
+            'bob's burgers',
+            'body horror',
+            'broken leg',
+            'corpse',
             'crotchboobs',
             'crotchbra',
+            'exposed bone',
+            'exposed muscle',
+            'flesh cube',
             'foot focus',
+            'guts',
             'hyper',
             'hyper belly',
             'hyper pregnancy',
             'impossibly large belly',
             'multiple pregnancy',
             'pregnant',
+            'rick and morty',
+            'rick sanchez',
+            'skinless'
             'translucent belly',
             'transparent belly',
             'transparent flesh',
