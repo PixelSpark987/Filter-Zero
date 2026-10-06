@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_9
+// @version      2026-10-06_10
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -178,16 +178,24 @@
             'army',
             'artist:fizzyizatty',
             'artist:gin-blade',
+            'big balls',
+            'big belly',
             'crotchboobs',
             'crotchbra',
+            'cum inflation',
             'fat fetish',
             'fattershy',
             'foot focus',
+            'futa',
+            'futa on female',
+            'futa twilight sparkle',
+            'huge belly',
             'immobile',
             'impossibly large belly',
             'impossibly large butt',
             'impossibly large everything',
             'impossibly obese',
+            'inflation',
             'morbidly obese',
             'obese',
             'ponut',
