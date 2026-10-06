@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_8
+// @version      2026-10-06_9
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -126,6 +126,7 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+            'ponut',
             'vore',
             'war',
             'womb with a view',
@@ -138,6 +139,7 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+            'ponut',
             'vore',
             'war',
             'womb with a view',
@@ -150,6 +152,7 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+            'ponut',
             'vore',
             'war',
             'womb with a view',
@@ -162,6 +165,7 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+            'ponut',
             'vore',
             'war',
             'womb with a view',
@@ -186,6 +190,7 @@
             'impossibly obese',
             'morbidly obese',
             'obese',
+            'ponut',
             'vore',
             'war',
             'womb with a view',
