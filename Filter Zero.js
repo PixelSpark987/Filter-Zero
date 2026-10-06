@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.8.5
+// @version      2.8.6
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -52,7 +52,17 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+            'hyper',
+            'hyper belly',
+            'hyper pregnancy',
+            'impossibly large belly',
+            'multiple pregnancy',
+            'pregnant',
+            'translucent belly',
+            'transparent belly',
+            'transparent flesh',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Manebooru
         'manebooru.art': [
