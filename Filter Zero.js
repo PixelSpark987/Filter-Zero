@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_6
+// @version      2026-10-06_7
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -53,8 +53,11 @@
         // Main Sites
         // Target tag names for Derpibooru
         'derpibooru.org': [
+            'adolf hitler',
             'adventure time',
             'alcohol',
+            'anus',
+            'army',
             'artist:cookie-lovey',
             'artist:sikojensika',
             'beer',
@@ -89,59 +92,79 @@
             'lois griffin',
             'long tongue',
             'meg griffin',
+            'military uniform',
             'multiple pregnancy',
+            'nazi',
+            'nazi armband',
+            'nazi uniform',
             'obese',
             'peter griffin',
+            'ponut',
             'pregnant',
+            'propaganda',
+            'propaganda poster',
+            'ptsd',
             'rick and morty',
             'rick sanchez',
+            'shell shock',
             'skinless',
             'strong fat',
+            'swastika',
             'translucent belly',
             'transparent belly',
             'transparent flesh',
             'vore',
+            'war',
             'womb with a view',
         ],
          // 
         // Target tag names for Manebooru
         'manebooru.art': [
+            'army',
             'crotchboobs',
             'crotchbra',
             'foot focus',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Target tag names for Ponerpics
         'ponerpics.org': [
+            'army',
             'crotchboobs',
             'crotchbra',
             'foot focus',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Target tag names for Ponybooru
         'ponybooru.org': [
+            'army',
             'crotchboobs',
             'crotchbra',
             'foot focus',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Target tag names for Tantabus
         'tantabus.ai': [
+            'army',
             'crotchboobs',
             'crotchbra',
             'foot focus',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Target tag names for Twibooru
         'twibooru.org': [
+            'army',
             'artist:fizzyizatty',
             'artist:gin-blade',
             'crotchboobs',
@@ -157,11 +180,13 @@
             'morbidly obese',
             'obese',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Other Sites - mapping target tag names for Furbooru
         'furbooru.org': [
+            'army',
             'artist:cbcamesburyfan',
             'artist:the-furry-railfan',
             'foot focus',
@@ -171,15 +196,18 @@
             'hyper inflation',
             'teats',
             'vore',
+            'war',
             'womb with a view',
         ],
          //
         // Target tag names for Trixiebooru
         'trixiebooru.org': [
+            'army',
             'crotchboobs',
             'crotchbra',
             'foot focus',
             'vore',
+            'war',
             'womb with a view',
         ],
     };
