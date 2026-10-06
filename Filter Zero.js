@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2026-10-06_2
+// @version      2026-10-06_3
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -49,8 +49,11 @@
     const SITE_TAGS = {
         // Main Sites - mapping target tag names for Derpibooru
         'derpibooru.org': [
+            'adventure time',
+            'alcohol',
             'artist:cookie-lovey',
             'artist:sikojensika',
+            'beer',
             'bleeding',
             'blood',
             'bob belcher',
@@ -67,6 +70,7 @@
             'family guy',
             'fat',
             'fattershy',
+            'finn the human',
             'flesh cube',
             'foot focus',
             'guts',
@@ -75,6 +79,7 @@
             'hyper pregnancy',
             'impossibly large belly',
             'injured',
+            'jake the dog',
             'lois griffin',
             'long tongue',
             'meg griffin',
