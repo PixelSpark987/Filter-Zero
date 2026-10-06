@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2026-10-06_1
+// @version      2026-10-06_2
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -49,16 +49,24 @@
     const SITE_TAGS = {
         // Main Sites - mapping target tag names for Derpibooru
         'derpibooru.org': [
+            'artist:cookie-lovey',
             'artist:sikojensika',
+            'bleeding',
+            'blood',
             'bob belcher',
             'bob\'s burgers',
             'body horror',
+            'brian griffin',
             'broken leg',
             'corpse',
             'crotchboobs',
             'crotchbra',
+            'emaciated',
             'exposed bone',
             'exposed muscle',
+            'family guy',
+            'fat',
+            'fattershy',
             'flesh cube',
             'foot focus',
             'guts',
@@ -66,11 +74,18 @@
             'hyper belly',
             'hyper pregnancy',
             'impossibly large belly',
+            'injured',
+            'lois griffin',
+            'long tongue',
+            'meg griffin',
             'multiple pregnancy',
+            'obese',
+            'peter griffin',
             'pregnant',
             'rick and morty',
             'rick sanchez',
             'skinless',
+            'strong fat',
             'translucent belly',
             'transparent belly',
             'transparent flesh',
