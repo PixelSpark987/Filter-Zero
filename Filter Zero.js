@@ -7,7 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
 // @grant        GM_addStyle
-// @version      2.9,0
+// @version      2026-10-06_1
 // Main Sites
 // @match        *://derpibooru.org/*
 // @match        *://*.derpibooru.org/*
@@ -83,6 +83,7 @@
             'crotchbra',
             'foot focus',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Ponerpics
         'ponerpics.org': [
@@ -90,6 +91,7 @@
             'crotchbra',
             'foot focus',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Ponybooru
         'ponybooru.org': [
@@ -97,6 +99,7 @@
             'crotchbra',
             'foot focus',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Tantabus
         'tantabus.ai': [
@@ -104,6 +107,7 @@
             'crotchbra',
             'foot focus',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Twibooru
         'twibooru.org': [
@@ -122,6 +126,7 @@
             'morbidly obese',
             'obese',
             'vore',
+            'womb with a view',
         ],
 
         // Other Sites - mapping target tag names for Furbooru
@@ -135,6 +140,7 @@
             'hyper inflation',
             'teats',
             'vore',
+            'womb with a view',
         ],
         // Target tag names for Trixiebooru
         'trixiebooru.org': [
@@ -142,6 +148,7 @@
             'crotchbra',
             'foot focus',
             'vore',
+            'womb with a view',
         ],
     };
 
