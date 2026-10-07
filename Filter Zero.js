@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_24
+// @version      2026-10-06_25
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -312,12 +312,15 @@
             'bdsm',
             'big balls',
             'big belly',
+			'bondage',
+			'bound',
             'chastity',
             'chastity cage',
             'covered in scat',
             'crotchboobs',
             'crotchbra',
             'cum inflation',
+			'double penetration',
             'fart',
             'fart cloud',
             'fart fetish',
@@ -339,9 +342,14 @@
             'impossibly large penis',
             'impossibly obese',
             'inflation',
+			'lactation',
+			'malesub',
+			'milk squirt',
             'morbidly obese',
+			'multiple penetration',
             'nipple piercing',
             'obese',
+			'ophiotaurus',
             'pet play',
             'ponut',
             'poop',
@@ -353,7 +361,15 @@
 			'rape',
 			'rule 63',
             'scat',
+			'submissive',
+			'tentacle bondage',
+			'tentacle porn',
+			'tentacles',
+			'tentacles on female',
             'thunder thighs',
+			'twisub',
+			'udder',
+			'vine bondage',
             'vore',
             'war',
             'wine bottle',
