@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_15
+// @version      2026-10-06_16
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -135,7 +135,7 @@
         	'used diaper',
     		'using diaper',
             'vore',
-            'war'
+            'war',
     		'wet diaper',
         	'wetting',
 			'wetting diaper',
