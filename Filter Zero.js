@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_25
+// @version      2026-10-06_26
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -312,10 +312,12 @@
             'bdsm',
             'big balls',
             'big belly',
+			'blackmail',
 			'bondage',
 			'bound',
             'chastity',
             'chastity cage',
+			'coercion',
             'covered in scat',
             'crotchboobs',
             'crotchbra',
@@ -343,6 +345,7 @@
             'impossibly obese',
             'inflation',
 			'lactation',
+			'lolidom',
 			'malesub',
 			'milk squirt',
             'morbidly obese',
@@ -359,6 +362,7 @@
             'poop stains',
             'pregnant',
 			'rape',
+			'reverse rape',
 			'rule 63',
             'scat',
 			'submissive',
@@ -366,6 +370,7 @@
 			'tentacle porn',
 			'tentacles',
 			'tentacles on female',
+			'threat',
             'thunder thighs',
 			'twisub',
 			'udder',
