@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_17
+// @version      2026-10-06_19
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -262,16 +262,32 @@
             'artist:cbcamesburyfan',
             'artist:the-furry-railfan',
 			'buttplug',
+			'double chin',
+			'fat',
+			'fat fetish',
             'foot focus',
+			'huge breasts',
+			'huge butt',
             'hyper',
             'hyper belly',
             'hyper breasts',
             'hyper inflation',
+			'maw',
+			'maw play',
+			'morbidly obese',
+			'obese',
+			'open maw',
+			'oral vore',
+			'overweight',
             'scat',
+			'slightly chubby',
             'teats',
 			'thick thighs',
+			'uvula',
+			'uvula focus',
             'vore',
             'war',
+			'wide hips',
             'womb with a view',
         ],
          //
