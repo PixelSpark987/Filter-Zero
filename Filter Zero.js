@@ -96,7 +96,7 @@
             'injured',
             'jake the dog',
             'lois griffin',
-            'long tongue'
+            'long tongue',
             'manure',
             'meg griffin',
             'military uniform',
