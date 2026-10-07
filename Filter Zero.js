@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_12
+// @version      2026-10-06_13
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -73,7 +73,11 @@
             'covered in manure',
             'covered in scat',
             'crotchboobs',
-            'crotchbra',
+            'crotchbra'
+            'diaper',
+            'diaper ftish',
+        	'diaper usage',
+        	'diapered',
             'emaciated',
             'exposed bone',
             'exposed muscle',
@@ -104,9 +108,11 @@
             'nazi',
             'nazi armband',
             'nazi uniform',
+        	'non-baby in diaper',
             'obese',
             'peter griffin',
             'ponut',
+        	'poofy diaper',
             'poop',
             'poop eating',
             'poop stains',
@@ -119,13 +125,20 @@
             'scat',
             'shell shock',
             'skinless',
+        	'soaked diaper',
             'strong fat',
             'swastika',
             'translucent belly',
             'transparent belly',
             'transparent flesh',
+        	'urine',
+        	'used diaper',
+    		'using diaper',
             'vore',
-            'war',
+            'war'
+    		'wet diaper',
+        	'wetting',
+			'wetting diaper',
             'womb with a view',
         ],
          // 
