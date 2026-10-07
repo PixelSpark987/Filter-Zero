@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_22
+// @version      2026-10-06_23
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -142,6 +142,7 @@
         	'wetting',
 			'wetting diaper',
             'womb with a view',
+			'zebra',
         ],
          // 
         // Target tag names for Manebooru
@@ -158,6 +159,7 @@
             'vore',
             'war',
             'womb with a view',
+			'zebra',
         ],
          //
         // Target tag names for Ponerpics
@@ -174,6 +176,7 @@
             'vore',
             'war',
             'womb with a view',
+			'zebra',
         ],
          //
         // Target tag names for Ponybooru
@@ -190,6 +193,7 @@
             'vore',
             'war',
             'womb with a view',
+			'zebra',
         ],
          //
         // Target tag names for Tantabus
@@ -217,7 +221,9 @@
 			'bruised',
 			'brutal',
 			'buttplug',
+			'buttslut',
 			'chained',
+			'collar',
 			'creator:longarms',
             'crotchboobs',
             'crotchbra',
@@ -243,13 +249,16 @@
 			'implied rape',
 			'jeweled buttplug',
 			'large penetration',
+			'latex',
 			'leaky diaper',
+			'leash',
 			'leg binder',
 			'magic suppression',
 			'medial ring',
 			'milking machine',
 			'muscular female',
 			'non-baby in diaper',
+			'nose ring',
 			'orc',
 			'pacifier gag',
 			'piercing',
@@ -266,7 +275,9 @@
             'scat',
 			'sex slave',
 			'slavery',
+			'sling bikini',
 			'spreader bar',
+			'strapon',
 			'tied',
 			'tied to chair',
 			'twilybuse',
@@ -281,6 +292,7 @@
 			'wetting diaper',
             'womb with a view',
 			'wrist cuffs',
+			'zebra',
         ],
          //
         // Target tag names for Twibooru
@@ -340,6 +352,7 @@
             'war',
             'wine bottle',
             'womb with a view',
+			'zebra',
         ],
          //
         // Other Sites - mapping target tag names for Furbooru
@@ -377,6 +390,7 @@
             'vore',
             'war',
             'womb with a view',
+			'zebra',
         ],
          //
         // Target tag names for Trixiebooru
@@ -392,6 +406,7 @@
             'vore',
             'war',
             'womb with a view',
+			'zebra',
         ],
     };
 
