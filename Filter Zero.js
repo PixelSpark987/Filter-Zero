@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_23
+// @version      2026-10-06_24
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -74,6 +74,7 @@
             'covered in scat',
             'crotchboobs',
             'crotchbra',
+			'degradation',
             'diaper',
             'diaper ftish',
         	'diaper usage',
@@ -92,6 +93,7 @@
             'foot focus',
             'futa',
             'guts',
+			'humiliation',
             'hyper',
             'hyper belly',
             'hyper pregnancy',
@@ -111,10 +113,13 @@
         	'non-baby in diaper',
             'obese',
             'peter griffin',
+			'piss drinking',
+			'pissing',
             'ponut',
         	'poofy diaper',
             'poop',
             'poop eating',
+			'poop in hair',
             'poop stains',
             'pregnant',
             'propaganda',
@@ -138,6 +143,7 @@
     		'using diaper',
             'vore',
             'war',
+			'watersports',
     		'wet diaper',
         	'wetting',
 			'wetting diaper',
