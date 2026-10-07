@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-06_26
+// @version      2026-10-06_27
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -92,6 +92,8 @@
             'flesh cube',
             'foot focus',
             'futa',
+			'griffon',
+			'gryphon',
             'guts',
 			'humiliation',
             'hyper',
@@ -158,6 +160,8 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+			'griffon',
+			'gryphon',
             'ponut',
 			'rape',
 			'rule 63',
@@ -175,6 +179,8 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+			'griffon',
+			'gryphon',
             'ponut',
 			'rape',
 			'rule 63',
@@ -192,6 +198,8 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+			'griffon',
+			'gryphon',
             'ponut',
 			'rape',
 			'rule 63',
@@ -246,8 +254,8 @@
 			'full diaper',
 			'futa',
 			'gag',
-			'gallus',
 			'griffon',
+			'gryphon',
 			'handprint',
 			'harness gag',
 			'helpless',
@@ -333,6 +341,8 @@
             'futa',
             'futa on female',
             'futa twilight sparkle',
+			'griffon',
+			'gryphon',
             'huge balls',
             'huge belly',
             'huge breasts',
@@ -393,6 +403,8 @@
 			'fat',
 			'fat fetish',
             'foot focus',
+			'griffon',
+			'gryphon',
 			'huge breasts',
 			'huge butt',
             'hyper',
@@ -427,6 +439,8 @@
             'crotchboobs',
             'crotchbra',
             'foot focus',
+			'griffon',
+			'gryphon',
 			'rape',
 			'rule 63',
             'scat',
