@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-08_05
+// @version      2026-10-08_06
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -195,6 +195,7 @@
 			'abuse',
             'anal',
 			'anal insertion',
+			'anal creampie',
 			'anatomically correct',
 			'ankle cuffs',
 			'anus',
@@ -315,6 +316,7 @@
 			'spreader bar',
 			'squirting',
 			'strapon',
+			'teats',
 			'the ass was fat',
 			'thick thighs',
 			'threesome',
