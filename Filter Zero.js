@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-07_04
+// @version      2026-10-07_05
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -393,6 +393,7 @@
             'poop on face',
             'poop stains',
             'pregnant',
+			'pubic hair',
 			'puckered asshole',
 			'punk',
 			'rape',
