@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-08_01
+// @version      2026-10-08_02
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -198,6 +198,7 @@
 			'anatomically correct',
 			'ankle cuffs',
 			'anus',
+			'armpit hair',
             'army',
 			'ball gag',
 			'bdsm',
