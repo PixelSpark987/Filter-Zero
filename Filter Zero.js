@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-07_03
+// @version      2026-10-07_04
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -290,6 +290,7 @@
          //
         // Target tag names for Twibooru
         'twibooru.org': [
+			'afterrape',
 			'alcohol',
             'anal',
             'anal insertion',
@@ -299,9 +300,11 @@
             'artist:fizzyizatty',
             'artist:gin-blade',
             'bdsm',
+			'big areola',
             'big balls',
             'big belly',
 			'big breasts',
+			'big nipples',
 			'bit gag',
 			'blackmail',
 			'bondage',
@@ -413,6 +416,7 @@
 			'vine bondage',
             'vore',
             'war',
+			'wide hips',
 			'wide load',
             'wine bottle',
             'womb with a view',
