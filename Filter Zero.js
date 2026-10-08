@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-07_01
+// @version      2026-10-07_02
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -440,8 +440,6 @@
             'war',
             'womb with a view',
 			'zebra',
-        ],
-         //
         ],
     };
 
