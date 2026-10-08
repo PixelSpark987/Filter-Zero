@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-08_02
+// @version      2026-10-08_03
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -252,6 +252,7 @@
 			'gag',
 			'griffon',
 			'gryphon',
+			'hairy balls',
 			'handprint',
 			'harness gag',
 			'helpless',
@@ -259,8 +260,11 @@
 			'huge breasts',
 			'huge butt',
 			'humiliation',
+			'hyper',
+			'hyper penis',
 			'implied rape',
 			'impossibly large breasts',
+			'impossibly large penis',
 			'jeweled buttplug',
 			'lactation',
 			'large penetration',
@@ -289,6 +293,7 @@
 			'poop eating',
 			'poop in hair',
 			'pregnant',
+			'pubic hair',
 			'pudgy pie',
 			'rape',
 			'restrained',
@@ -310,6 +315,7 @@
 			'urine',
 			'used diaper',
 			'using diaper',
+			'veiny cock',
             'vore',
             'war',
 			'watersports',
