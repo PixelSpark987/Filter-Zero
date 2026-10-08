@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-07
+// @version      2026-10-07_01
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -16,8 +16,6 @@
 // @match        *://*.manebooru.art/*
 // @match        *://ponerpics.org/*
 // @match        *://*.ponerpics.org/*
-// @match        *://ponybooru.org/*
-// @match        *://*.ponybooru.org/*
 // @match        *://tantabus.ai/*
 // @match        *://*.tantabus.ai/*
 // @match        *://twibooru.org/*
@@ -26,8 +24,6 @@
 // Other Sites
 // @match        *://furbooru.org/*
 // @match        *://*.furbooru.org/*
-// @match        *://trixiebooru.org/*
-// @match        *://*.trixiebooru.org/*
 // ==/UserScript==
 
 // Immediately Invoked Function Expression (IIFE) to isolate variables and avoid polluting global scope
@@ -193,25 +189,6 @@
 			'zebra',
         ],
          //
-        // Target tag names for Ponybooru
-        'ponybooru.org': [
-            'anal',
-            'army',
-            'crotchboobs',
-            'crotchbra',
-            'foot focus',
-			'griffon',
-			'gryphon',
-            'ponut',
-			'rape',
-			'rule 63',
-            'scat',
-            'vore',
-            'war',
-            'womb with a view',
-			'zebra',
-        ],
-         //
         // Target tag names for Tantabus
         'tantabus.ai': [
 			'abdominal bulge',
@@ -313,6 +290,7 @@
          //
         // Target tag names for Twibooru
         'twibooru.org': [
+			'alcohol',
             'anal',
             'anal insertion',
             'anus',
@@ -322,9 +300,20 @@
             'bdsm',
             'big balls',
             'big belly',
+			'big breasts',
 			'blackmail',
 			'bondage',
 			'bound',
+			'bunny suit',
+			'busty applejack',
+			'busty aria blaze',
+			'busty fluttershy',
+			'busty pinkie pie',
+			'busty rainbow dash',
+			'busty rarity',
+			'busty starlight glimmer',
+			'busty twilight sparkle',
+			'cocktail',
             'chastity',
             'chastity cage',
 			'coercion',
@@ -333,6 +322,7 @@
             'crotchbra',
             'cum inflation',
 			'double penetration',
+			'edgelight glimmer',
             'fart',
             'fart cloud',
             'fart fetish',
@@ -343,11 +333,13 @@
             'foot focus',
             'futa',
             'futa on female',
-            'futa twilight sparkle',
+			'futa starlight glimmer',
+			'futa twilight sparkle',
 			'griffon',
 			'gryphon',
             'huge balls',
             'huge belly',
+			'huge butt',
             'huge breasts',
             'huge penis',
             'immobile',
@@ -358,15 +350,26 @@
             'impossibly obese',
             'inflation',
 			'lactation',
+			'large breasts',
+			'large butt',
 			'lolidom',
 			'malesub',
 			'milk squirt',
             'morbidly obese',
 			'multiple penetration',
+			'musk',
+			'musky balls',
             'nipple piercing',
             'obese',
 			'ophiotaurus',
             'pet play',
+			'playboy bunny',
+			'playboy bunny applejack',
+			'playboy bunny fluttershy',
+			'playboy bunny pinkie pie',
+			'playboy bunny rainbow dash',
+			'playboy bunny rarity',
+			'playboy bunny twilight sparkle',
             'ponut',
             'poop',
             'poop eating',
@@ -374,12 +377,15 @@
             'poop on face',
             'poop stains',
             'pregnant',
+			'punk',
 			'rape',
 			'reverse rape',
 			'rule 63',
             'scat',
+			'solo futa',
 			'starlard glimmer',
 			'submissive',
+			'teats',
 			'tentacle bondage',
 			'tentacle porn',
 			'tentacles',
@@ -436,22 +442,6 @@
 			'zebra',
         ],
          //
-        // Target tag names for Trixiebooru
-        'trixiebooru.org': [
-            'anal',
-            'army',
-            'crotchboobs',
-            'crotchbra',
-            'foot focus',
-			'griffon',
-			'gryphon',
-			'rape',
-			'rule 63',
-            'scat',
-            'vore',
-            'war',
-            'womb with a view',
-			'zebra',
         ],
     };
 
