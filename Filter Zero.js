@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-08_06
+// @version      2026-10-09
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -349,6 +349,7 @@
 			'anal tail plug',
             'anus',
             'army',
+			'artist:fab3716',
             'artist:fizzyizatty',
             'artist:gin-blade',
             'bdsm',
