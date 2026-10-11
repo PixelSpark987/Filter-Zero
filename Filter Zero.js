@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-10
+// @version      2026-10-10-02
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -345,8 +345,10 @@
 			'afterrape',
 			'alcohol',
             'anal',
+			'anal creampie',
             'anal insertion',
 			'anal tail plug',
+			'anatomically correct',
             'anus',
             'army',
 			'artist:fab3716',
@@ -392,6 +394,7 @@
             'fattershy',
             'flat chastity cage',
             'foot focus',
+			'frog (hoof)',
             'futa',
             'futa on female',
 			'futa starlight glimmer',
@@ -403,6 +406,7 @@
 			'gryphon',
 			'hanging breasts',
 			'hoers',
+			'hoof fetish',
             'huge balls',
             'huge belly',
 			'huge butt',
@@ -468,6 +472,7 @@
             'thunder thighs',
 			'twisub',
 			'udder',
+			'veiny cock',
 			'vine bondage',
             'vore',
             'war',
