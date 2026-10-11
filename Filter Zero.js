@@ -6,7 +6,7 @@
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-09
+// @version      2026-10-10
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -362,6 +362,7 @@
 			'blackmail',
 			'bondage',
 			'bound',
+			'bubble guppies',
 			'bunny suit',
 			'busty applejack',
 			'busty aria blaze',
