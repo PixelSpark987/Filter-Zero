@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
-// @version      2026-10-16_02
+// @version      2026-10-16_03
 // @author       PixelSpark987 - https://is.gd/PS987
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -533,7 +533,7 @@
 			'uvula focus',
             'vore',
             'war',
-			'wide hips',
+		 // 'wide hips', - this one blurs 99% of Furbooru
             'womb with a view',
 			'zebra',
         ],
