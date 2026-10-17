@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
-// @version      2026-10-17_01
+// @version      2026-10-17_02
 // @author       PixelSpark987 - https://is.gd/PS987
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -413,8 +413,11 @@
 			'fat',
             'fat fetish',
             'fattershy',
+			'fetish',
             'flat chastity cage',
+			'foot fetish',
             'foot focus',
+			'footjob',
 			'frog (hoof)',
             'futa',
 			'futa fluttershy',
@@ -482,7 +485,7 @@
             'poop on face',
             'poop stains',
             'pregnant',
-			'prostitute
+			'prostitute',
 			'prostitution',
 			'pubic hair',
 			'puckered asshole',
