@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
-// @version      2026-10-16_01
+// @version      2026-10-16_02
 // @author       PixelSpark987 - https://is.gd/PS987
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -492,7 +492,7 @@
             'army',
             'artist:cbcamesburyfan',
 			'artist:mik3hawk',
-            'artist:the-furry-railfan',
+			'artist:the-furry-railfan',
 			'bea santello (nitw)',
 			'buttplug',
 			'canine penis',
