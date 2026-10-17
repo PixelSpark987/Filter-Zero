@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
+// @version      2026-10-16_01
 // @author       PixelSpark987 - https://is.gd/PS987
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @namespace    http://tampermonkey.net/
-// @version      2026-10-10-02
+
 // @grant        GM_addStyle
 // 
 // Main Sites
@@ -486,10 +487,20 @@
         // Other Sites - mapping target tag names for Furbooru
         'furbooru.org': [
             'anal',
+			'animal penis',
+			'argonian',
             'army',
             'artist:cbcamesburyfan',
-            'artist:the-furry-railfan',
+			'artist:mik3hawk',
+            'artist:the-furry-railfan',
+			'bea santello (nitw)',
 			'buttplug',
+			'canine penis',
+			'cigar',
+			'cigarette',
+			'crocodile',
+			'crocodilian',
+			'deeja (skyrim)',
 			'double chin',
 			'fat',
 			'fat fetish',
@@ -502,6 +513,8 @@
             'hyper belly',
             'hyper breasts',
             'hyper inflation',
+			'jojo\'s bizarre adventure',
+			'knot',
 			'maw',
 			'maw play',
 			'morbidly obese',
@@ -513,12 +526,14 @@
 			'rule 63',
             'scat',
 			'slightly chubby',
+			'smoking',
             'teats',
 			'thick thighs',
 			'uvula',
 			'uvula focus',
             'vore',
             'war',
+			'wide hips',
             'womb with a view',
 			'zebra',
         ],
