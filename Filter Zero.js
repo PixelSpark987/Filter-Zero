@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Filter Zero
 // @description  Applies a CSS blur to specified tags in philomena booru sites to bypass Twibooru's 128-tag limit for spoilered and hidden tags
-// @version      2026-10-17_02
+// @version      2026-10-21_01
 // @author       PixelSpark987 - https://is.gd/PS987
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -374,6 +374,7 @@
 			'artist:fab3716',
             'artist:fizzyizatty',
             'artist:gin-blade',
+			'artist:the lunar archer',
 			'artist:sugar and spice productions',
             'bdsm',
 			'big areola',
@@ -471,6 +472,7 @@
 			'oc:space cow',
 			'ophiotaurus',
             'pet play',
+			'pissing',
 			'playboy bunny',
 			'playboy bunny applejack',
 			'playboy bunny fluttershy',
@@ -503,11 +505,13 @@
 			'tentacle porn',
 			'tentacles',
 			'tentacles on female',
+			'the ass was fat',
 			'thick cup cake',
 			'threat',
             'thunder thighs',
 			'twisub',
 			'udder',
+			'urine',
 			'veiny cock',
 			'vine bondage',
             'vore',
