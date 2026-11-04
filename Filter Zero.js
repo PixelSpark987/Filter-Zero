@@ -379,6 +379,7 @@
             'artist:josephthedumbimpostor',
 			'artist:the lunar archer',
 			'artist:sugar and spice productions',
+			'artist:supahdonarudo',
 			'artist:vumm61',
             'bdsm',
 			'big areola',
