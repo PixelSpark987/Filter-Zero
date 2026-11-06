@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-04_05
+// @version      2026-11-05_01
 // @icon         https://cdn.twibooru.org/favicon.svg
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -247,6 +247,8 @@
 			'chained',
 			'chubby',
 			'collar',
+			'creator:budget_aiartist',
+			'creator:ilovekrystal',
 			'creator:longarms',
             'crotchboobs',
             'crotchbra',
@@ -258,6 +260,8 @@
 			'diapered',
 			'dominatrix',
 			'double penetration',
+			'dragon',
+			'dubious consent',
 			'excessive cum',
 			'extra thicc',
 			'fat',
@@ -273,7 +277,11 @@
 			'g3',
 			'g5',
 			'gag',
+			'gang rape',
+			'gaping mouth',
+			'gridmark',
 			'griffon',
+			'grotesque',
 			'group sex',
 			'gryphon',
 			'hairy balls',
@@ -315,15 +323,21 @@
 			'pincow pie',
 			'piss drinking',
 			'pissing',
+			'pissing while raped',
             'ponut',
 			'poop',
+			'pooping',
 			'poop eating',
 			'poop in hair',
 			'pregnant',
+			'presenting anus',
 			'pubic hair',
+			'public use',
 			'pudgy pie',
 			'rape',
+			'rape by proxy',
 			'restrained',
+			'rough sex',
 			'rule 63',
 			'sagging breasts',
             'scat',
@@ -336,6 +350,7 @@
 			'squirting',
 			'strapon',
 			'teats',
+			'tentacle rape',
 			'the ass was fat',
 			'thick thighs',
 			'threesome',
