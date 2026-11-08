@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-08_01
+// @version      2026-11-08_02
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -211,6 +211,8 @@
             'anal',
 			'anal insertion',
 			'anal creampie',
+			'anal knotting',
+			'anal tugging',
 			'anatomically correct',
 			'ankle cuffs',
 			'anus',
@@ -244,6 +246,7 @@
 			'busty spitfire',
 			'buttplug',
 			'buttslut',
+			'canine penis',
 			'chained',
 			'chubby',
 			'collar',
@@ -261,6 +264,7 @@
 			'dominatrix',
 			'double penetration',
 			'dragon',
+			'dragon dick',
 			'dubious consent',
 			'excessive cum',
 			'extra thicc',
@@ -288,6 +292,7 @@
 			'harness gag',
 			'helpless',
 			'herm',
+			'hippogriff',
 			'horsecock',
 			'huge breasts',
 			'huge butt',
@@ -300,6 +305,7 @@
 			'intersex',
 			'jeweled buttplug',
 			'knot',
+			'knotted penis',
 			'knotting',
 			'lactation',
 			'large penetration',
