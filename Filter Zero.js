@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-12_03
+// @version      2026-11-12_04
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -421,8 +421,12 @@
 			'artist:ir1ss1a',
             'artist:josephthedumbimpostor',
 			'artist:juninhooficial',
+			'artist:ketopagano',
+			'artist:littlemissbloo',
 			'artist:neccanon',
 			'artist:poni_belli_02',
+			'artist:sarahndipity cosplay',
+			'artist:shelbeanie',
 			'artist:smolbunny',
 			'artist:sugar and spice productions',
 			'artist:supahdonarudo',
@@ -457,6 +461,8 @@
 			'bruised',
 			'brutal',
 			'bubble guppies',
+			'bully',
+			'bullying',
 			'bunny suit',
 			'busty applejack',
 			'busty aria blaze',
@@ -510,6 +516,8 @@
             'foot focus',
 			'footjob',
 			'frog (hoof)',
+			'fursuit',
+			'fursuit head',
             'futa',
 			'futa fluttershy',
 			'futa oc',
@@ -569,6 +577,8 @@
 			'in pain',
 			'inside stomach',
 			'intestines',
+			'irl',
+			'irl human',
 			'kenny mccormick',
 			'kinktober',
 			'kyle broflovski',
@@ -616,6 +626,7 @@
 			'playboy bunny rarity',
 			'playboy bunny twilight sparkle',
             'ponut',
+			'ponysuit',
             'poop',
 			'pooping',
             'poop eating',
