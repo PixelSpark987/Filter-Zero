@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-11_02
+// @version      2026-11-12_01
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -209,6 +209,7 @@
         'tantabus.ai': [
 			'abdominal bulge',
 			'abuse',
+			'alcohol',
             'anal',
 			'anal insertion',
 			'anal creampie',
@@ -224,6 +225,7 @@
 			'beaten',
 			'beaten up',
 			'big areola',
+			'big balls',
 			'big breasts',
 			'big nipples',
 			'big penis',
@@ -251,6 +253,7 @@
 			'chained',
 			'chubby',
 			'collar',
+			'creator:boxen549',
 			'creator:budget_aiartist',
 			'creator:ilovekrystal',
 			'creator:longarms',
@@ -266,6 +269,8 @@
 			'double penetration',
 			'dragon',
 			'dragon dick',
+			'drunk',
+			'drunk bubble',
 			'dubious consent',
 			'excessive cum',
 			'extra thicc',
@@ -354,14 +359,18 @@
 			'skindentation',
 			'slavery',
 			'sling bikini',
+			'smegma',
+			'smelly',
 			'spank mark',
 			'spanking',
 			'spread anus',
 			'spreader bar',
 			'squirting',
+			'stink fumes',
 			'strapon',
 			'teats',
 			'tentacle rape',
+			'that pony sure does love cider',
 			'the ass was fat',
 			'thick thighs',
 			'threesome',
