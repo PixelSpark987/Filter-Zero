@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-12_04
+// @version      2026-11-12_05
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -399,6 +399,7 @@
 			'abdominal bulge',
 			'abuse',
 			'acid',
+			'adult foal',
 			'after anal',
 			'afterrape',
 			'alcohol',
@@ -445,6 +446,7 @@
 			'blackmail',
 			'blank eyes',
 			'bleeding',
+			'bleeding eyes',
 			'blood',
 			'bloodbath',
 			'blood bath',
@@ -453,11 +455,14 @@
 			'blood stains',
 			'blood writing',
 			'bloody hooves',
+			'bloody mouth',
+			'body horror',
 			'bondage',
 			'bones in balls',
 			'bound',
 			'boxing',
 			'brain',
+			'broken *',
 			'bruised',
 			'brutal',
 			'bubble guppies',
@@ -495,12 +500,15 @@
 			'diaper fetish',
 			'digestion',
 			'double penetration',
+			'dripping blood',
 			'dubious consent',
 			'eaten alive',
 			'edgelight glimmer',
 			'editor:firlin',
 			'entrails',
 			'eric cartman',
+			'exposed bone',
+			'exposed organs',
 			'execution',
             'fart',
             'fart cloud',
@@ -595,6 +603,7 @@
 			'malesub',
 			'mare prey',
 			'mental breakdown',
+			'messy diaper',
 			'milk squirt',
             'morbidly obese',
 			'mouthbleed',
