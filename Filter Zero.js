@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-11_01
+// @version      2026-11-11_02
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -135,6 +135,7 @@
             'rick sanchez',
 			'rule 63',
             'scat',
+			'seizure warning',
             'shell shock',
             'skinless',
         	'soaked diaper',
@@ -348,6 +349,7 @@
 			'rule 63',
 			'sagging breasts',
             'scat',
+			'seizure warning',
 			'sex slave',
 			'skindentation',
 			'slavery',
@@ -626,6 +628,7 @@
 			'rough sex',
 			'rule 63',
             'scat',
+			'seizure warning',
 			'self harm',
 			'self harm scars',
 			'severed head',
@@ -634,6 +637,7 @@
 			'solo futa',
 			'south park',
 			'spanish',
+			'spanking',
 			'spread butt',
 			'stan marsh',
 			'starlard glimmer',
@@ -717,6 +721,7 @@
 			'rape',
 			'rule 63',
             'scat',
+			'seizure warning',
 			'slightly chubby',
 			'smoking',
             'teats',
