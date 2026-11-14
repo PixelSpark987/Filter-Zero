@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-12_07
+// @version      2026-11-13_01
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -257,6 +257,7 @@
 			'creator:budget_aiartist',
 			'creator:ilovekrystal',
 			'creator:longarms',
+			'creepy crawlies',
             'crotchboobs',
             'crotchbra',
 			'cum inflation',
@@ -433,6 +434,7 @@
 			'artist:supahdonarudo',
 			'artist:the lunar archer',
 			'artist:vumm61',
+			'bald',
 			'barely pony related',
             'bdsm',
 			'belly bed',
@@ -480,6 +482,7 @@
 			'busty rarity',
 			'busty starlight glimmer',
 			'busty twilight sparkle',
+			'butt crush',
 			'buttplug',
 			'candy gore',
             'chastity',
@@ -505,6 +508,7 @@
 			'diaper',
 			'diaper fetish',
 			'digestion',
+			'dora the explorer',
 			'double penetration',
 			'dripping blood',
 			'dubious consent',
@@ -517,6 +521,7 @@
 			'exposed brain',
 			'exposed organs',
 			'execution',
+			'family guy',
             'fart',
             'fart cloud',
             'fart fetish',
@@ -558,8 +563,10 @@
 			'guts',
 			'hacksaw',
 			'hanging breasts',
+			'herbert',
 			'hoers',
 			'hoof fetish',
+			'hornet',
 			'huge anus',
             'huge balls',
             'huge belly',
@@ -595,6 +602,7 @@
 			'intestines',
 			'irl',
 			'irl human',
+			'japanese giant hornet',
 			'kenny mccormick',
 			'kinktober',
 			'kyle broflovski',
@@ -689,6 +697,7 @@
 			'spread butt',
 			'stan marsh',
 			'starlard glimmer',
+			'steve harvey',
 			'stomach acid',
 			'submissive',
 			'suffering',
@@ -723,11 +732,14 @@
 			'vine bondage',
             'vore',
             'war',
+			'wasp',
+			'wasp nest',
 			'wet diaper',
 			'wide hips',
 			'wide load',
             'wine bottle',
             'womb with a view',
+			'yellowjacket',
 			'zebra',
         ],
          //
