@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-13_01
+// @version      2026-11-14_01
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -495,6 +495,7 @@
 			'corpse',
             'covered in scat',
 			'crazy smile',
+			'creepy crawlies',
             'crotchboobs',
             'crotchbra',
             'cum inflation',
@@ -515,6 +516,7 @@
 			'eaten alive',
 			'edgelight glimmer',
 			'editor:firlin',
+			'eldritch abomination',
 			'entrails',
 			'eric cartman',
 			'exposed bone',
@@ -532,6 +534,7 @@
             'fattershy',
 			'fetish',
             'flat chastity cage',
+			'flesh cube',
 			'foot fetish',
             'foot focus',
 			'footjob',
@@ -631,6 +634,7 @@
 			'musky balls',
 			'musky butt',
 			'mutant',
+			'nightmare fuel',
             'nipple piercing',
 			'no eyes',
 			'nosebleed',
