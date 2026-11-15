@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-14_01
+// @version      2026-11-14_02
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -433,6 +433,7 @@
 			'artist:sugar and spice productions',
 			'artist:supahdonarudo',
 			'artist:the lunar archer',
+			'artist:vickylu2710',
 			'artist:vumm61',
 			'bald',
 			'barely pony related',
@@ -605,7 +606,9 @@
 			'intestines',
 			'irl',
 			'irl human',
+			'israel',
 			'japanese giant hornet',
+			'judaism',
 			'kenny mccormick',
 			'kinktober',
 			'kyle broflovski',
@@ -648,6 +651,8 @@
 			'organs',
 			'overdose',
 			'pain',
+			'palestine',
+			'palestinian flag',
             'pet play',
 			'pissing',
 			'playboy bunny',
@@ -657,6 +662,7 @@
 			'playboy bunny rainbow dash',
 			'playboy bunny rarity',
 			'playboy bunny twilight sparkle',
+			'politics',
             'ponut',
 			'ponysuit',
             'poop',
@@ -677,6 +683,7 @@
 			'rainbow blood',
 			'rape',
 			'rape by deception',
+			'rligion',
 			'reverse rape',
 			'ripped flesh',
 			'ripping flesh',
