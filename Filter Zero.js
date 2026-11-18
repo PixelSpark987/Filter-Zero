@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-18_05
+// @version      2026-11-18_10
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -49,12 +49,12 @@
     // =========================================================================
 
     const SITE_CONFIG = {
-        'derpibooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Derpibooru-Tags.json',
-        'manebooru.art': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Manebooru-Tags.json',
-        'ponerpics.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Ponerpics-Tags.json',
-        'tantabus.ai': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Tantabus-Tags.json',
-        'twibooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Twibooru-Tags.json',
-        'furbooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Furbooru-Tags.json'
+        'derpibooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Derpibooru-Tags.json',
+        'manebooru.art':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Manebooru-Tags.json',
+        'ponerpics.org':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Ponerpics-Tags.json',
+        'tantabus.ai':    'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Tantabus-Tags.json',
+        'twibooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Twibooru-Tags.json',
+        'furbooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Other%20Sites/Furbooru-Tags.json'
     };
 
     // =========================================================================
@@ -375,7 +375,7 @@
                     updateOverlay(container, matchedTags);
                 } else {
                     // Remove blur CSS class
-                    mediaTarget.classList.0 ? mediaTarget.classList.remove('custom-local-blur') : mediaTarget.classList.remove('custom-local-blur'); // standard remove
+                    // standard remove
                     mediaTarget.classList.remove('custom-local-blur');
                     // Remove overlay content
                     updateOverlay(container, []);
