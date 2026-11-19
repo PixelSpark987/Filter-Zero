@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-18_10
+// @version      2026-11-19_01
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -12,6 +12,7 @@
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
 // @grant        GM_notification
+// @connect      raw.githubusercontent.com
 // 
 // Main Sites
 // @match        *://derpibooru.org/*
@@ -42,10 +43,13 @@
     // Boolean flag to control whether browser-native thumbnail 'title' hover tooltips are removed
     const HIDE_TOOLTIPS = true; // Set to true to hide image hover tooltips, or false to keep them
 
+    // Boolean flag to control whether damaged tag warnings also trigger a Tampermonkey notification
+    const NOTIFY_ON_DAMAGED_TAGS = true;
+
     // =========================================================================
     // SITE REGISTRY & RAW GITHUB ASSET LINKS
     // To add new sites, add them to the // @match list above and add their domain 
-    // and raw GitHub JSON asset URL below.
+    // and raw GitHub tag list URL below.
     // =========================================================================
 
     const SITE_CONFIG = {
@@ -64,9 +68,9 @@
     // Function to find the matching configuration for the current site domain
     function getCurrentSiteConfig() {
         const hostname = window.location.hostname.toLowerCase();
-        for (const [siteDomain, jsonUrl] of Object.entries(SITE_CONFIG)) {
+        for (const [siteDomain, tagListUrl] of Object.entries(SITE_CONFIG)) {
             if (hostname === siteDomain || hostname.endsWith('.' + siteDomain)) {
-                return { domain: siteDomain, url: jsonUrl };
+                return { domain: siteDomain, url: tagListUrl };
             }
         }
         return null;
@@ -93,7 +97,108 @@
     // Build the initial set immediately on startup
     rebuildBlurSet(currentTagsArray);
 
-    // Background function to fetch latest JSON updates from GitHub, validate, cache, and hot-swap
+    // Parses one-tag-per-line single-quoted entries (e.g. 'you\'re right') and flags damaged lines
+    function parseSingleQuotedTagList(rawText) {
+        const lines = rawText.split(/\r?\n/);
+        const parsedTags = [];
+        const issues = [];
+
+        lines.forEach((rawLine, index) => {
+            const lineNumber = index + 1;
+            const trimmed = rawLine.trim();
+
+            // Ignore empty or whitespace-only lines
+            if (!trimmed) return;
+
+            // Must begin with an opening single quote
+            if (!trimmed.startsWith("'")) {
+                issues.push({
+                    line: lineNumber,
+                    raw: rawLine,
+                    reason: "Missing opening single quote (')"
+                });
+                return;
+            }
+
+            // Walk characters inside the single-quoted string to validate escapes and find closing quote
+            let unescapedTag = '';
+            let closedProperly = false;
+            let i = 1;
+
+            while (i < trimmed.length) {
+                const ch = trimmed[i];
+
+                if (ch === '\\') {
+                    // Backslash at the very end of the line means no closing quote was reached
+                    if (i + 1 >= trimmed.length) {
+                        issues.push({
+                            line: lineNumber,
+                            raw: rawLine,
+                            reason: "Trailing backslash with missing closing single quote"
+                        });
+                        return;
+                    }
+
+                    const nextCh = trimmed[i + 1];
+                    if (nextCh === "'") {
+                        // Valid escaped apostrophe: \' -> '
+                        unescapedTag += "'";
+                        i += 2;
+                    } else if (nextCh === '\\') {
+                        // Escaped backslash: \\ -> \
+                        unescapedTag += '\\';
+                        i += 2;
+                    } else {
+                        // Keep other escaped characters intact while flagging unusual escape
+                        unescapedTag += nextCh;
+                        i += 2;
+                    }
+                } else if (ch === "'") {
+                    closedProperly = true;
+
+                    // Any non-whitespace characters after the closing quote indicate a damaged line
+                    const trailingAfterQuote = trimmed.slice(i + 1).trim();
+                    if (trailingAfterQuote.length > 0) {
+                        issues.push({
+                            line: lineNumber,
+                            raw: rawLine,
+                            reason: `Unexpected trailing content after closing quote: "${trailingAfterQuote}"`
+                        });
+                        return;
+                    }
+                    break;
+                } else {
+                    unescapedTag += ch;
+                    i += 1;
+                }
+            }
+
+            if (!closedProperly) {
+                issues.push({
+                    line: lineNumber,
+                    raw: rawLine,
+                    reason: "Unclosed single quote or unescaped apostrophe inside tag (use \\' for apostrophes)"
+                });
+                return;
+            }
+
+            const cleanedTag = unescapedTag.trim();
+            if (!cleanedTag) {
+                issues.push({
+                    line: lineNumber,
+                    raw: rawLine,
+                    reason: "Empty tag value inside single quotes"
+                });
+                return;
+            }
+
+            parsedTags.push(cleanedTag);
+        });
+
+        return { tags: parsedTags, issues };
+    }
+
+    // Background function to fetch latest tag list from GitHub, validate, cache, and hot-swap
     function syncTagsInBackground() {
         if (!currentSite) return;
 
@@ -106,32 +211,36 @@
             url: currentSite.url,
             onload: function(response) {
                 if (response.status === 200) {
-                    try {
-                        const freshTags = JSON.parse(response.responseText);
-                        if (Array.isArray(freshTags)) {
-                            // Save fresh tags to persistent local storage cache
-                            GM_setValue(cacheKey, freshTags);
-                            // Mark as checked for this session
-                            sessionStorage.setItem(sessionKey, 'true');
+                    const { tags: freshTags, issues } = parseSingleQuotedTagList(response.responseText);
 
-                            // Hot-swap the tags in memory and immediately re-scan the page
-                            rebuildBlurSet(freshTags);
-                            queueScan();
-                            console.log(`[Filter Zero] Successfully updated and applied tags for ${currentSite.domain}`);
-                        } else {
-                            throw new Error("JSON root is not an array");
-                        }
-                    } catch (e) {
-                        // Catch JSON syntax errors (e.g. missing commas caught by linter or parser)
-                        console.error(`[Filter Zero] ERROR: Syntax error in JSON file for ${currentSite.domain}! Using cached backup.`, e);
-                        if (typeof GM_notification !== 'undefined') {
+                    if (issues.length > 0) {
+                        console.warn(`[Filter Zero] WARNING: Detected ${issues.length} damaged tag line(s) in ${currentSite.domain} list! Keeping existing cached tags safe.`);
+                        issues.forEach(issue => {
+                            console.warn(`[Filter Zero] Line ${issue.line}: ${issue.reason} -> ${issue.raw.trim()}`);
+                        });
+
+                        if (NOTIFY_ON_DAMAGED_TAGS && typeof GM_notification !== 'undefined') {
+                            const firstIssue = issues[0];
                             GM_notification({
-                                title: "Filter Zero JSON Error",
-                                text: `Malformed JSON detected in ${currentSite.domain} tag list. Using cached backup.`,
-                                timeout: 5000
+                                title: "Filter Zero Damaged Tag Detected",
+                                text: `${currentSite.domain} (Line ${firstIssue.line}): ${firstIssue.reason}. Check console for details.`,
+                                timeout: 6000
                             });
                         }
+                        return;
                     }
+
+                    // Save validated tags to persistent local storage cache
+                    GM_setValue(cacheKey, freshTags);
+                    // Mark as checked for this session
+                    sessionStorage.setItem(sessionKey, 'true');
+
+                    // Hot-swap the tags in memory and immediately re-scan the page
+                    rebuildBlurSet(freshTags);
+                    queueScan();
+                    console.log(`[Filter Zero] Successfully updated and applied ${freshTags.length} tags for ${currentSite.domain}`);
+                } else {
+                    console.warn(`[Filter Zero] Failed to fetch tag list for ${currentSite.domain}. HTTP status: ${response.status}`);
                 }
             },
             onerror: function(err) {
@@ -328,7 +437,7 @@
                 }
                 if (mediaTarget && mediaTarget.hasAttribute('data-original-title')) {
                     mediaTarget.setAttribute('title', mediaTarget.getAttribute('data-original-title'));
-                    mediaTarget.removeAttribute('data-original-title');
+                    mediaTarget.removeAttribute('title');
                 }
             }
 
@@ -375,7 +484,6 @@
                     updateOverlay(container, matchedTags);
                 } else {
                     // Remove blur CSS class
-                    // standard remove
                     mediaTarget.classList.remove('custom-local-blur');
                     // Remove overlay content
                     updateOverlay(container, []);
