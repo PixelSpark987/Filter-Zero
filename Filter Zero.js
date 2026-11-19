@@ -2,7 +2,7 @@
 // @name         Filter Zero
 // @description  A custom CSS blur applied to specified tags in Philomena booru sites, originally intended to bypass Twibooru's 128-tag limit for spoilered and hidden tags.
 // @author       PixelSpark987 - https://is.gd/PS987
-// @version      2026-11-19_01
+// @version      2026-11-19_02
 // @icon         https://is.gd/TwibooruSVG
 // @downloadURL  https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
 // @updateURL    https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Filter%20Zero.js
@@ -10,8 +10,8 @@
 // @grant        GM_addStyle
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @grant        GM_xmlhttpRequest
 // @grant        GM_notification
+// @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
 // 
 // Main Sites
@@ -53,12 +53,12 @@
     // =========================================================================
 
     const SITE_CONFIG = {
-        'derpibooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Derpibooru-Tags.json',
-        'manebooru.art':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Manebooru-Tags.json',
-        'ponerpics.org':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Ponerpics-Tags.json',
-        'tantabus.ai':    'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Tantabus-Tags.json',
-        'twibooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Twibooru-Tags.json',
-        'furbooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Other%20Sites/Furbooru-Tags.json'
+        'derpibooru.org': 'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Derpibooru-Tags.list',
+        'manebooru.art':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Manebooru-Tags.list',
+        'ponerpics.org':  'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Ponerpics-Tags.list',
+        'tantabus.ai':    'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Tantabus-Tags.list',
+        'twibooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Main%20Sites/Twibooru-Tags.list',
+        'furbooru.org':   'https://raw.githubusercontent.com/PixelSpark987/Filter-Zero/refs/heads/main/Other%20Sites/Furbooru-Tags.list'
     };
 
     // =========================================================================
